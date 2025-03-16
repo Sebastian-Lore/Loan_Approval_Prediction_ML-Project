@@ -1,4 +1,4 @@
-# This file processes the data (encoding, scaling, and saving it to a new CSV).
+# This file preprocesses the data (encoding, scaling, and saving it to a new CSV).
 
 # imports
 import pandas as pd

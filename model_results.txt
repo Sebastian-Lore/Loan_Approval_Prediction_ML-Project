@@ -1,0 +1,57 @@
+Model Accuracy: 0.9754
+
+Confusion Matrix and Breakdown:
+
+[[529   7]
+ [ 14 304]]
+
+True Negatives (TN): 529 - These are the instances where the model predicted 0 (Rejected loan) and the actual label was also 0 (Rejected loan).
+False Positives (FP): 7 - These are the instances where the model predicted 1 (Approved loan), but the actual label was 0 (Rejected loan).
+False Negatives (FN): 14 - These are the instances where the model predicted 0 (Rejected loan), but the actual label was 1 (Approved loan).
+True Positives (TP): 304 - These are the instances where the model predicted 1 (Approved loan) and the actual label was also 1 (Approved loan).
+
+Classification Report and Breakdown:
+
+{
+    "0": {
+        "precision": 0.9742173112338858,
+        "recall": 0.9869402985074627,
+        "f1-score": 0.9805375347544022,
+        "support": 536.0
+    },
+    "1": {
+        "precision": 0.977491961414791,
+        "recall": 0.9559748427672956,
+        "f1-score": 0.9666136724960255,
+        "support": 318.0
+    },
+    "accuracy": 0.9754098360655737,
+    "macro avg": {
+        "precision": 0.9758546363243383,
+        "recall": 0.9714575706373791,
+        "f1-score": 0.9735756036252139,
+        "support": 854.0
+    },
+    "weighted avg": {
+        "precision": 0.9754366774604991,
+        "recall": 0.9754098360655737,
+        "f1-score": 0.9753527710563181,
+        "support": 854.0
+    }
+}
+
+Class 0 (Rejected Loans):
+  Precision: 0.9742 - When the model predicts a rejected loan, it is correct 97.42% of the time.
+  Recall: 0.9869 - The model correctly identifies 98.69% of all rejected loans.
+  F1-score: 0.9805 - Harmonic mean of precision and recall, giving a balance between the two.
+  Support: 536.0 - Number of actual rejected loan cases in the test data.
+
+Class 1 (Approved Loans):
+  Precision: 0.9775 - When the model predicts an approved loan, it is correct 97.75% of the time.
+  Recall: 0.9560 - The model correctly identifies 95.60% of all approved loans.
+  F1-score: 0.9666 - Harmonic mean of precision and recall, giving a balance between the two.
+  Support: 318.0 - Number of actual approved loan cases in the test data.
+
+Overall Model Performance:
+  Macro Average F1-score: 0.9736 - Average F1-score for both classes, treating them equally.
+  Weighted Average F1-score: 0.9754 - Average F1-score considering class imbalance.
